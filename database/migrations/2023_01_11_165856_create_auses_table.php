@@ -21,10 +21,10 @@ return new class extends Migration
             $table->string('required_certificate')->nullable();
             $table->string('training_duration')->nullable();
             $table->string('working_hours')->nullable();
-            $table->string('salary_first_year')->nullable();
-            $table->string('salary_second_year')->nullable();
-            $table->string('salary_third_year')->nullable();
-            $table->string('salary_fourth_year')->nullable();
+            $table->float('salary_first_year')->default(0.0);
+            $table->float('salary_second_year')->default(0.0);
+            $table->float('salary_third_year')->default(0.0);
+            $table->float('salary_fourth_year')->default(0.0);
             $table->longText('body');
             $table->longText('links')->nullable();
             $table->boolean('popular')->default(false);
